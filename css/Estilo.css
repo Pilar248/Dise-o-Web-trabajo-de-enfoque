@@ -1,0 +1,240 @@
+/*Contenedor*/
+body{
+  margin:auto;
+  
+}
+.contenedor{
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  position: relative;
+  top:0;
+  width: 100%;
+  height: auto;
+  background-color: #E6F2CB;
+}
+.carritoimg{
+  height: 35px;
+  width: 35px;
+  margin-top: 50px;
+  padding-right: 30px;
+}
+.logo{
+  height: 130px;
+  width: 130px;
+}
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #E6F2CB;
+  display: flex;
+  flex-wrap: wrap; /* ← IMPORTANTE */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+h1 { 
+  scroll-margin-top: 200px; /* ajusta según la altura de tu cabecera */ 
+}
+
+
+
+/*Cajas centrales*/
+.caja1, .caja2, .caja3 {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  position: relative;
+  width: 100%; 
+}
+.caja4{
+  padding: 20px ;
+}
+
+.contenidoProductos {
+  display: flex;
+  gap: 20px;
+  
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.producto {
+  min-width: 150px;
+  text-align: center;
+  width: 45%; /* en móvil caben 2 por fila */
+}
+
+
+a { text-decoration: none; /* Quita el subrayado */ 
+  color: inherit; /* Mantiene el color del texto original */ 
+} 
+a:visited { 
+  color: inherit; /* Evita el color morado de enlace visitado */ 
+} 
+a:hover { 
+  text-decoration: none; /* Sin subrayado al pasar el ratón */ 
+  color: inherit; /* Sin cambio de color */
+ }
+
+
+
+@media (max-width: 600px) {
+  .producto {
+    width: 100%; /* en pantallas pequeñas 1 por fila */
+  }
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+}
+
+
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contenidoProductos {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* IMPORTANTE */
+  scroll-behavior: smooth;
+  padding: 10px;
+  width: 100%;
+}
+
+.carrusel button {
+  background: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.producto .etiqueta {
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.destacados {
+  display: flex;
+  justify-self: center;
+  flex-wrap: wrap;     
+  gap: 20px;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .destacados {
+    flex-direction: column;   /* uno debajo del otro */
+    gap: 15px;
+  }
+}
+
+
+.destacados button {
+  background: #fff;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  overflow: hidden; 
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+nav li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none; 
+  color: #333;
+}
+
+.icoImagen{
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+}
+
+nav li a:hover {
+  background-color: #d4e6b5; /* un verde suave */
+  border-radius: 5px;
+}
+
+
+/* Estilos para el pie de página */
+footer{
+  background-color: #E6F2CB;
+  width: 100%;
+  padding-left: 20px;
+}
+
+
+/* Tablets */
+@media (max-width: 900px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .carritoimg {
+    margin-top: 20px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+
+  .cabecera {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
